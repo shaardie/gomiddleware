@@ -20,8 +20,8 @@ func WithLogging(h http.HandlerFunc, logger logr.Logger, cfg Config) http.Handle
 		h(cw, r)
 
 		if cfg.AccessLog {
-			logger = logger.WithValues("statusCode", cw.StatusCode)
 			logger.Info("Server access",
+				"statusCode", cw.StatusCode,
 				"method", r.Method,
 				"proto", r.Proto,
 				"header", r.Header.Clone(),
