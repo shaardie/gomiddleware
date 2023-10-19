@@ -1,2 +1,3 @@
-# gomiddleware
-Different Middlewares for Golang HTTP Server
+# Go Middleware
+
+Different Middlewares for Golang HTTP Server.
